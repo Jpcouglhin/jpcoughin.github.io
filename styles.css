@@ -1,0 +1,122 @@
+/* --- Global Styles & Variables --- */
+:root {
+  --base-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #007bff; /* Example: Blue */
+  --secondary-color: #6c757d;
+  --bg-color: #f4f7f6;
+  --font-family: 'Open Sans', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 20px; /* Base size, adjusted for readability */
+}
+
+/* --- Navbar --- */
+.page-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: var(--base-color);
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-holder a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.bgimage {
+  height: 100vh;
+  background: url('images/heroImage.jpeg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 2rem;
+}
+
+/* --- Skills Section (Grid) --- */
+.skills {
+  padding: 50px 5%;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: var(--base-color);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Add JS for hamburger menu toggle */
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+}
